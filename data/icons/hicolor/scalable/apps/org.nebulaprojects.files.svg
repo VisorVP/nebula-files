@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="folder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <!-- Folder icon -->
+  <path d="M56 80 L56 192 C56 198 61 203 67 203 L189 203 C195 203 200 198 200 192 L200 100 C200 94 195 89 189 89 L136 89 L122 75 C120 73 117 72 114 72 L67 72 C61 72 56 77 56 83Z" fill="url(#folder)" opacity="0.95"/>
+  <!-- Star/Nova sparkle -->
+  <path d="M168 52 L172 64 L184 68 L172 72 L168 84 L164 72 L152 68 L164 64Z" fill="white" opacity="0.9"/>
+  <path d="M196 36 L198 44 L206 46 L198 48 L196 56 L194 48 L186 46 L194 44Z" fill="white" opacity="0.6"/>
+</svg>

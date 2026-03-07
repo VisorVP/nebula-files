@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.nebulaprojects.files</id>
+  <name>Nebula Files</name>
+  <summary>Modern file manager with themes and cloud integration</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="org.nebulaprojects">
+    <name>Nebula Projects</name>
+  </developer>
+  <description>
+    <p>
+      Nebula Files is a modern, feature-rich file manager built with GTK4 and libadwaita.
+      It offers multiple themes including a Windows 11 Explorer replica, macOS-inspired look,
+      and a clean minimal design.
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Multiple themes: Nova, macOS, Windows 11, Minimal, Retro (dark and light variants)</li>
+      <li>Cloud drive integration: OneDrive and Google Drive via rclone</li>
+      <li>Split view for side-by-side file browsing</li>
+      <li>Spacebar Quick Look file preview</li>
+      <li>Click-to-edit address bar with case-insensitive navigation</li>
+      <li>Tabbed browsing with independent navigation</li>
+      <li>File type filters: Images, Documents, Videos, Audio, Code, Archives</li>
+      <li>Multi-format compression: ZIP, TAR.GZ, TAR.XZ, TAR.BZ2</li>
+      <li>Archive extraction: ZIP, TAR, 7z, RAR</li>
+      <li>Customizable keyboard shortcuts</li>
+      <li>Enhanced file properties with permission editor</li>
+      <li>Super Search across home directory and mounted drives</li>
+      <li>Drag and drop between panes and external apps</li>
+      <li>This PC drive view with storage bars</li>
+      <li>Customizable accent colors, fonts, and icon styles</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">org.nebulaprojects.files.desktop</launchable>
+  <url type="homepage">https://github.com/nebulaprojects/nebula-files</url>
+  <url type="bugtracker">https://github.com/nebulaprojects/nebula-files/issues</url>
+  <content_rating type="oars-1.1" />
+  <branding>
+    <color type="primary" scheme_preference="light">#8b5cf6</color>
+    <color type="primary" scheme_preference="dark">#6366f1</color>
+  </branding>
+  <releases>
+    <release version="4.2.3" date="2026-03-07">
+      <description>
+        <p>Initial Flathub release with full feature set including split view, cloud drives, filters, and multi-theme support.</p>
+      </description>
+    </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Nebula Files with the default Nova theme</caption>
+      <image>https://raw.githubusercontent.com/nebulaprojects/nebula-files/main/screenshots/nova-theme.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Windows 11 Explorer theme</caption>
+      <image>https://raw.githubusercontent.com/nebulaprojects/nebula-files/main/screenshots/win11-theme.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Split view for side-by-side browsing</caption>
+      <image>https://raw.githubusercontent.com/nebulaprojects/nebula-files/main/screenshots/split-view.png</image>
+    </screenshot>
+  </screenshots>
+  <requires>
+    <display_length compare="ge">600</display_length>
+  </requires>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+</component>

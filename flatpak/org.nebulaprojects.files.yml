@@ -1,0 +1,59 @@
+app-id: org.nebulaprojects.files
+runtime: org.gnome.Platform
+runtime-version: '46'
+sdk: org.gnome.Sdk
+command: nebula-files
+
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --filesystem=home
+  - --filesystem=/media
+  - --filesystem=/mnt
+  - --filesystem=/run/media
+  - --talk-name=org.freedesktop.FileManager1
+  - --talk-name=org.gnome.Shell
+  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
+
+modules:
+  - name: rclone
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 rclone /app/bin/rclone
+    sources:
+      - type: archive
+        url: https://downloads.rclone.org/v1.68.2/rclone-v1.68.2-linux-amd64.zip
+        sha256: ""  # Fill in after downloading
+        dest-filename: rclone.zip
+      - type: shell
+        commands:
+          - mv rclone-*/rclone .
+
+  - name: expect
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://sourceforge.net/projects/expect/files/Expect/5.45.4/expect5.45.4.tar.gz
+        sha256: ""  # Fill in after downloading
+
+  - name: nebula-files
+    buildsystem: simple
+    build-commands:
+      # Install Python source files
+      - install -Dm755 src/nebula-files.py /app/bin/nebula-files-main.py
+      - install -Dm755 src/nebula-files-win11.py /app/bin/nebula-files-win11.py
+      - install -Dm755 src/nebula-files-launcher.py /app/bin/nebula-files-launcher.py
+      # Install launcher wrapper
+      - install -Dm755 data/nebula-files.sh /app/bin/nebula-files
+      # Install desktop file
+      - install -Dm644 data/org.nebulaprojects.files.desktop /app/share/applications/org.nebulaprojects.files.desktop
+      # Install icon
+      - install -Dm644 data/icons/hicolor/scalable/apps/org.nebulaprojects.files.svg /app/share/icons/hicolor/scalable/apps/org.nebulaprojects.files.svg
+      # Install metainfo
+      - install -Dm644 data/org.nebulaprojects.files.metainfo.xml /app/share/metainfo/org.nebulaprojects.files.metainfo.xml
+    sources:
+      - type: dir
+        path: .

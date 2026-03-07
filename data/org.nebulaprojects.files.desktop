@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Nebula Files
+GenericName=File Manager
+Comment=Modern file manager with themes, cloud drives, and split view
+Exec=nebula-files
+Icon=org.nebulaprojects.files
+Categories=System;FileManager;Utility;GTK;
+Terminal=false
+StartupNotify=true
+MimeType=inode/directory;
+Keywords=files;file manager;explorer;folder;onedrive;google drive;
