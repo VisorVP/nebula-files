@@ -34,8 +34,8 @@
     </ul>
   </description>
   <launchable type="desktop-id">org.nebulaprojects.files.desktop</launchable>
-  <url type="homepage">https://github.com/nebulaprojects/nebula-files</url>
-  <url type="bugtracker">https://github.com/nebulaprojects/nebula-files/issues</url>
+  <url type="homepage">https://github.com/VisorVP/nebula-files</url>
+  <url type="bugtracker">https://github.com/VisorVP/nebula-files/issues</url>
   <content_rating type="oars-1.1" />
   <branding>
     <color type="primary" scheme_preference="light">#8b5cf6</color>
@@ -51,15 +51,15 @@
   <screenshots>
     <screenshot type="default">
       <caption>Nebula Files with the default Nova theme</caption>
-      <image>https://raw.githubusercontent.com/nebulaprojects/nebula-files/main/screenshots/nova-theme.png</image>
+      <image>https://raw.githubusercontent.com/VisorVP/nebula-files/main/screenshots/nova-theme.png</image>
     </screenshot>
     <screenshot>
       <caption>Windows 11 Explorer theme</caption>
-      <image>https://raw.githubusercontent.com/nebulaprojects/nebula-files/main/screenshots/win11-theme.png</image>
+      <image>https://raw.githubusercontent.com/VisorVP/nebula-files/main/screenshots/file-browsing.png</image>
     </screenshot>
     <screenshot>
       <caption>Split view for side-by-side browsing</caption>
-      <image>https://raw.githubusercontent.com/nebulaprojects/nebula-files/main/screenshots/split-view.png</image>
+      <image>https://raw.githubusercontent.com/VisorVP/nebula-files/main/screenshots/settings.png</image>
     </screenshot>
   </screenshots>
   <requires>
