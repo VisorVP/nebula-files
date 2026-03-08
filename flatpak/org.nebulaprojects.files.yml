@@ -16,7 +16,6 @@ finish-args:
   - --talk-name=org.freedesktop.FileManager1
   - --talk-name=org.gnome.Shell
   - --env=DCONF_USER_CONFIG_DIR=.config/dconf
-
 modules:
   - name: rclone
     buildsystem: simple
@@ -26,10 +25,7 @@ modules:
       - type: archive
         url: https://downloads.rclone.org/v1.73.2/rclone-v1.73.2-linux-amd64.zip
         sha256: 00a1d8cb85552b7b07bb0416559b2e78fcf9c6926662a52682d81b5f20c90535
-        dest-filename: rclone.zip
-      - type: shell
-        commands:
-          - mv rclone-*/rclone .
+        strip-components: 1
 
   - name: nebula-files
     buildsystem: simple
@@ -44,4 +40,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/VisorVP/nebula-files.git
-        commit: 757f8af
+        commit: be3f949
