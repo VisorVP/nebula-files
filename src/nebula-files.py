@@ -3147,11 +3147,13 @@ fi
                 self._apply_btn.set_sensitive(False)
                 self._cancel_btn.set_sensitive(False)
                 self._changes_lbl.set_label("No changes"); self._changes_lbl.set_opacity(0.4)
-                # Check if theme changed to Win11 (needs restart)
-                if self.S.get("theme") == "windows":
+                # Check if theme changed to/from Win11 (needs restart either way)
+                _prev_was_windows = self._original_settings.get("theme") == "windows"
+                _now_is_windows = self.S.get("theme") == "windows"
+                if _now_is_windows or _prev_was_windows:
                     rd = Adw.MessageDialog(transient_for=self)
                     rd.set_heading("Restart Required")
-                    rd.set_body("Windows 11 theme uses a separate optimized app.\nRestart Nebula Files to apply.")
+                    rd.set_body("Windows 11 theme uses a separate optimized app.\nRestart Nebula Files to apply the theme change.")
                     rd.add_response("later", "Later")
                     rd.add_response("restart", "Restart Now")
                     rd.set_response_appearance("restart", Adw.ResponseAppearance.SUGGESTED)
