@@ -1,0 +1,49 @@
+<svg width="256" height="256" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#0f2040"/>
+      <stop offset="100%" stop-color="#020810"/>
+    </radialGradient>
+    <linearGradient id="f" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="120" height="120" rx="26" fill="url(#bg)"/>
+
+  <!-- Stars -->
+  <circle cx="18" cy="20" r="1"   fill="white"   opacity="0.6"/>
+  <circle cx="95" cy="15" r="1.2" fill="white"   opacity="0.5"/>
+  <circle cx="105" cy="45" r="0.8" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="15" cy="90" r="1"   fill="white"   opacity="0.4"/>
+  <circle cx="100" cy="100" r="0.9" fill="#93c5fd" opacity="0.5"/>
+
+  <!-- Folder body -->
+  <path d="M18 54 C18 48 22 44 28 44 L49 44 L56 36 L92 36
+           C98 36 102 40 102 46 L102 84
+           C102 90 98 94 92 94 L28 94
+           C22 94 18 90 18 84 Z"
+        fill="url(#f)" filter="url(#glow)"/>
+
+  <!-- Folder tab -->
+  <path d="M28 44 L49 44 L56 36 L28 36 Z" fill="#0891b2"/>
+
+  <!-- Shine overlay -->
+  <path d="M18 54 C18 48 22 44 28 44 L49 44 L56 36 L92 36
+           C98 36 102 40 102 46 L102 62
+           C60 62 18 60 18 54 Z"
+        fill="white" opacity="0.06"/>
+
+  <!-- Files inside folder -->
+  <rect x="28" y="62" width="16" height="20" rx="3" fill="white" opacity="0.25"/>
+  <rect x="48" y="62" width="16" height="20" rx="3" fill="white" opacity="0.2"/>
+  <rect x="68" y="62" width="16" height="20" rx="3" fill="white" opacity="0.15"/>
+  <rect x="88" y="62" width="8"  height="20" rx="3" fill="white" opacity="0.1"/>
+</svg>
