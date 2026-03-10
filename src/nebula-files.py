@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Nova Files - Modern File Manager
-# VERSION: v4.2.3
+# VERSION: v4.2.6-beta
 
 import gi
 gi.require_version('Gtk', '4.0')
@@ -2883,7 +2883,7 @@ fi
 
         # ABOUT
         sec_a=Gtk.Label(label="ABOUT"); sec_a.set_xalign(0); sec_a.add_css_class("settings-section"); panel.append(sec_a)
-        ver=Gtk.Label(label="Nebula Files v4.2.0"); ver.set_xalign(0); ver.add_css_class("settings-label"); ver.set_opacity(0.6); panel.append(ver)
+        ver=Gtk.Label(label="Nebula Files v4.2.6-beta"); ver.set_xalign(0); ver.add_css_class("settings-label"); ver.set_opacity(0.6); panel.append(ver)
         abt=Gtk.Label(label="A modern file manager for Linux"); abt.set_xalign(0); abt.add_css_class("sidebar-meta"); abt.set_opacity(0.5); panel.append(abt)
         # Spacer
         sp=Gtk.Box(); sp.set_size_request(-1, 20); panel.append(sp)
